@@ -15,7 +15,10 @@ export const PeoplePage = () => {
         setPeople(data);
         setLoading(false);
       })
-      .catch(() => setError(true));
+      .catch(() => {
+        setError(true);
+        setLoading(false);
+      });
   }, []);
 
   return (
